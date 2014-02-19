@@ -1,54 +1,51 @@
 doctype html
 html(lang='en-us')
-head
+  head
     meta(charset='utf-8')
     title M.A.P.S github projects
     meta(name='description', content='this is my portfolio')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
     link(rel='stylesheet', href='css/xpressio.css')
-    link(rel='stylesheet', href='css/style.css')
   body
-    header.bck.b_black.text.center.color.c_white.padding_small
+    header.bck.b_mysauce2.text.center.color.c_white.padding_small
       nav.inline.middle.margin_small
         span.logo
-          h1 #{header}
+          h2 #{header}
 
-    section.bck.b_stimulation.text.center.book.color.c_white
+    section.bck.b_mysauce1.text.center.book.color.c_white
       .padding_big
         .row
           .col12
             h1.text.book.margin_bottom_medium
               span Creating your own MD doc files
 
-    section.width60.margin_auto.border.solid.all_big.padding_big.margin_top_medium.margin_bottom_big.addCommentForm
-          form( method="post", action="/doc")
-              div
-                  .margin_auto.padding_small
-                    span.label File title :
-                    input(name="title", placeholder='file md title')
-                  .margin_auto.padding_small
-                    span.label Name :
-                    input(name="id", placeholder='F-#[trello-ID]')
-                  .margin_auto.padding_small
-                    span.label Objectives :
-                    textarea(name="objectives", placeholder='short desc (max 5 lines)')
-                  .margin_auto.padding_small
-                    span.label Inspiration :
-                    textarea(name="inspiration", placeholder='other features')
-                  .with40.margin_auto.padding_small
-                    span.label Tech info
-                    textarea(name='ti', placeholder='how it works')
-                    .margin_auto.padding_small
-                      span.label Frontend
-                      textarea(name='frontend', placeholder='frontend tech doc')
-                    .margin_auto.padding_small
-                      span.label Backend
-                      textarea(name='frontend', placeholder='backend tech doc')
+    section.width70.margin_auto.padding_big.margin_top_medium
+      form( method="post", action="/doc")
+        .margin_small
+          span.padding_medium.label File title :
+          input.border.all_small.solid.margin_bottom_small.padding_medium(name="title", placeholder='file md title')
+        .margin_small
+          span.padding_medium.label Name :
+          input.border.all_small.solid.margin_bottom_small.padding_medium(name="id", placeholder='F-#[trello-ID]')
+        .margin_small
+          span.padding_medium.label Objectives :
+          textarea.border.all_small.solid.margin_bottom_small.padding_medium(name="objectives", placeholder='short desc (max 5 lines)')
+        .margin_small
+          span.padding_medium.label Inspiration :
+          textarea.border.all_small.solid.margin_bottom_small.padding_medium(name="inspiration", placeholder='other features')
+        .margin_small
+          span.padding_medium.label Tech info
+          textarea.border.all_small.solid.margin_bottom_small.padding_medium(name='ti', placeholder='how it works')
+        .margin_small
+          span.padding_medium.label Frontend
+          textarea.border.all_small.solid.margin_bottom_small.padding_medium(name='frontend', placeholder='frontend tech doc')
+        .margin_small
+          span.padding_medium.label Backend
+          textarea.border.all_small.solid.margin_bottom_small.padding_medium(name='frontend', placeholder='backend tech doc')
+        .margin_auto.padding_small#addCommentSubmit
+          input.border.all_small.solid.margin_bottom_small.padding_medium(type="submit", value="Generate Docfile")
 
-                  .with40.margin_auto.padding_small#addCommentSubmit
-                    input(type="submit", value="Generate Docfile")
-
-    footer
+    footer.p_fixed.anchor.padding_medium.bck.b_black_medium.text.color.c_black_light.bottom
       blockquote #{footer}
     script(type='text/javascript', src='js/crud.js')

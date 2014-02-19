@@ -1,6 +1,6 @@
 exports.getAll = function (req, res){
   res.render( 'index', {
-      header : 'Doc generator',
+      header : 'Tregit doc generator',
       footer : '@2014 by M.A.P.S Powered by Node.js y Express '
   });
 };

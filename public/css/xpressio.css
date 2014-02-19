@@ -298,6 +298,7 @@ img.small{width:30%}
 .o_hidden{overflow:hidden}
 .alignright{float:right}
 .alignleft{float:left}
+.bottom{bottom:0}
 .inline{display:inline-block}
 .center{display:block;margin:0 auto}
 .margin_auto{margin:auto auto}
